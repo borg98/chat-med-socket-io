@@ -1,0 +1,41 @@
+@use "variables" as v;
+
+.display-rooms-wrapper__container {
+  background-color: v.$backgroundWarmth;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  color: v.$textOnDarkBackground;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 20pt;
+    padding: 10px;
+    color: v.$textOnDarkBackground;
+    color: white;
+   
+  }
+
+  &__button-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+    &__button {
+      background-color: v.$accentButtons;
+      color: v.$darkShade1;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 12pt;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: v.$backgroundWarmth;
+        color: v.$accentButtons;
+      }
+    }
+  }
+}

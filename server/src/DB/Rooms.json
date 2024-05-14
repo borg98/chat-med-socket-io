@@ -1,0 +1,87 @@
+[
+    {
+      "id": "1",
+      "room_name": "General",
+      "users": [
+        {
+          "id": 1,
+          "username": "admin",
+          "email": "admin",
+          "password": "admin",
+          "role": "user",
+          "room_id": "1",
+          "active": false,
+          "messages": [
+            {
+              "id": 0,
+              "message": "Hej vgd?",
+              "user_id": 1,
+              "created_at": "Sat, 20 Apr 2023 04:20:01",
+              "updated_at": "Sat, 20 Apr 2023 04:20:01",
+              "room_id": "1"
+            },
+            {
+              "id": 1,
+              "message": "¡DRICKER BÄRSEN!",
+              "user_id": 1,
+              "created_at": "Sat, 20 Apr 2023 04:20:03",
+              "updated_at": "Sat, 20 Apr 2023 04:20:03",
+              "room_id": "1"
+            }
+          ]
+        }, 
+        {
+          "id": 2,
+          "username": "user2",
+          "email": "user2@example.com",
+          "password": "password2",
+          "role": "user",
+          "room_id": "1",
+          "active": false,
+          "messages": [
+            {
+              "id": 2,
+              "message": "Inget dd?",
+              "user_id": 2,
+              "created_at": "Sat, 20 Apr 2023 04:20:02",
+              "updated_at": "Sat, 20 Apr 2023 04:20:02",
+              "room_id": "1"
+            }
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "id": 0,
+          "message": "Hej vgd?",
+          "user_id": 1,
+          "created_at": "Sat, 20 Apr 2023 04:20:01",
+          "updated_at": "Sat, 20 Apr 2023 04:20:01",
+          "room_id": "1"
+        },
+        {
+          "id": 1,
+          "message": "Inget dd?",
+          "user_id": 2,
+          "created_at": "Sat, 20 Apr 2023 04:20:02",
+          "updated_at": "Sat, 20 Apr 2023 04:20:02",
+          "room_id": "1"
+        },
+        {
+          "id": 2,
+          "message": "k",
+          "user_id": 1,
+          "created_at": "Sat, 20 Apr 2023 04:20:03",
+          "updated_at": "Sat, 20 Apr 2023 04:20:03",
+          "room_id": "1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "room_name": "Öl",
+      "users": [],
+      "messages": []
+    }
+
+  ]

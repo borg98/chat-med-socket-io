@@ -1,0 +1,222 @@
+@use "variables" as v;
+
+@keyframes fadeInUser {
+  from {
+    transform: rotate(70deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeInNonUser {
+  from {
+    transform: rotate(-70deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.user-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  gap: 10px;
+  margin: 5px;
+  padding: 5px;
+
+  max-width: 45%;
+  min-width: 200px;
+
+  &__last-message {
+    position: relative;
+    animation: fadeInUser 0.4s ease-out;
+    transform-origin: bottom right;
+  }
+
+  &__icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 30%;
+    background-color: v.$linkColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  &__content::after {
+    content: "";
+    position: absolute;
+
+    bottom: -10px;
+    left: 85%;
+    transform: translateX(-50%);
+
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: v.$linkColor transparent transparent;
+    border-radius: 20px;
+  }
+
+  &__content {
+    background-color: v.$linkColor;
+    border-radius: 10px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 15px;
+    gap: 5px;
+
+    position: relative;
+    &__username {
+      grid-column: span 1;
+      font-size: 11pt;
+      color: v.$textOnDarkBackground;
+    }
+    &__message {
+      grid-column: span 2;
+      text-align: left;
+      margin: 0;
+      color: v.$textOnDarkBackground;
+      font-size: 14pt;
+
+      word-break: break-word;
+    }
+    &__edit-input {
+      grid-column: span 2;
+      width: 100%;
+      border: 1px solid v.$backgroundWarmth;
+      border-radius: 5px;
+      background-color: v.$backgroundLight;
+      color: v.$textOnDarkBackground;
+      font-size: 22pt;
+      line-break: auto;
+    }
+    &__edit-save {
+      grid-column: span 2;
+      width: 100%;
+
+      border: 1px solid v.$backgroundWarmth;
+      border-radius: 5px;
+      background-color: v.$backgroundLight;
+      color: v.$textOnDarkBackground;
+      font-size: 15pt;
+      line-break: auto;
+      cursor: pointer;
+    }
+  }
+
+  &__time-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: max-content;
+
+    &__edit {
+      color: v.$textOnDarkBackground;
+      border: none;
+      background-color: transparent;
+      font-size: 12pt;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    &__timestamp {
+      text-align: right;
+      margin: 0;
+      color: v.$textOnDarkBackground;
+    }
+  }
+}
+.other-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  gap: 5px;
+  margin: 5px;
+  padding: 5px;
+
+  max-width: 45%;
+  min-width: 200px;
+
+  &__last-message {
+    position: relative;
+    animation: fadeInNonUser 0.4s ease-out;
+    transform-origin: bottom left;
+  }
+
+  &__icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 30%;
+    background-color: v.$mainBrandColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  &__content::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+    transform: translateX(-50%);
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: v.$mainBrandColor transparent transparent;
+  }
+
+  &__content {
+    background-color: v.$mainBrandColor;
+    border-radius: 10px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    padding: 15px;
+
+    position: relative;
+    &__username {
+      grid-column: span 1;
+      font-size: 13pt;
+      color: v.$lightShade1;
+    }
+    &__message {
+      grid-column: span 2;
+      text-align: left;
+      margin: 0;
+      color: v.$textOnDarkBackground;
+      font-size: 16pt;
+      line-break: auto;
+    }
+    &__timestamp {
+      text-align: right;
+    }
+  }
+  &__time-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &__edit {
+      color: v.$textOnDarkBackground;
+      border: none;
+      background-color: transparent;
+      font-size: 12pt;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    &__timestamp {
+      text-align: right;
+      margin: 0;
+      color: v.$textOnDarkBackground;
+    }
+  }
+}

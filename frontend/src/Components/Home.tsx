@@ -24,7 +24,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const s = io("https://chat-med-socket-io-server.vercel.app:3000");
+    const s = io("https://chat-med-socket-io-server.vercel.app");
     setSocket(s);
     return () => {
       s.disconnect();

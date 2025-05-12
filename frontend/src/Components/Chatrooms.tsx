@@ -23,7 +23,9 @@ const Chatrooms = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const socket = io("http://localhost:3000");
+    const socket = io(
+      "http://https://chat-med-socket-io-frontend.vercel.app:3000"
+    );
     setSocket(socket);
     socket.on("server-rooms-array", (rooms: IRoom[]) => {
       setRooms(rooms);

@@ -175,6 +175,6 @@ io.on("connection", (socket) => {
 
 server.listen(PORT, () => {
   console.log(
-    `Server is running on http://https://chat-med-socket-io-frontend.vercel.app:${PORT}`
+    `Server is running on https://chat-med-socket-io-frontend.vercel.app:${PORT}`
   );
 });
